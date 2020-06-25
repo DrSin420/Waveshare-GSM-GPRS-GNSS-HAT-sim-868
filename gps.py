@@ -2,6 +2,9 @@
 # Filename: text.py
 import serial
 import time
+
+#use ttyAMAO for pi zero, zero w and 2+
+#use ttu50 for pi 3 & 4
 ser = serial.Serial("/dev/ttyAMA0",115200)
 
 W_buff = ["AT+CGNSPWR=1\r\n", "AT+CGNSSEQ=\"RMC\"\r\n", "AT+CGNSINF\r\n", "AT+CGNSURC=2\r\n", "AT+CGNSTST=1\r\n"]
